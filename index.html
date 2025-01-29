@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<style type="text/css">
+		.body{
+			background: black;
+			background-image: url(1.jpg);
+			background-size: 100%;
+			background-attachment: fixed;
+		}
+		.box1 {
+			background-image: url(2.jpg);
+			background-size: 100% 100%;
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 200px;
+			left: 225px;
+			transition: 1s;
+		}
+		.box2 {
+			background-image: url(3.jpg);
+			background-size: 100% 100%;
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 200px;
+			left: 625px;
+			transition: 1s;
+		}
+		.box3 {
+			background-image: url(4.jpg);
+			background-size: 100% 100%;
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 200px;
+			left: 1025px;
+			transition: 1s;
+		}
+		.box4 {
+			background-image: url(5.jpg);
+			background-size: 100% 100%;
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 450px;
+			left: 225px;
+			transition: 1s;
+		}
+		.box5 {
+			background-image: url(6.jpg);
+			background-size: 100% 100%;
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 450px;
+			left: 625px;
+			transition: 1s;
+		}
+		.box6 {
+			background-image: url(7.jpg);
+			background-size:  100% 100%;
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 450px;
+			left: 1025px;
+			transition: 1s;
+		}
+		.btn1{
+			left: 700px;
+			position: absolute;
+			top: 100px;
+			width: 150px;
+			height: 50px;
+		}
+		.h3{
+			position: absolute;
+			left: 675px;
+			
+		}
+		.p{
+			color: white;
+		}
+		.p2{
+			color: white;
+		}
+		.p3{
+			color: white;
+		}
+		.p4{
+			color: white;
+		}
+		.p5{
+			color: white;
+		}
+		.p6{
+			color: white;
+		}
+		.pr{
+			position: absolute;
+			left: 685px;
+			top: 50px;
+		}
+		.h1{
+			color: red;
+			position: absolute;
+			left: 625px;
+			display: none;
+			transition: 2s;
+			top:300px;
+		}
+	</style>
+</head>
+<body class="body col-12">
+	<h1 class="h1">GAME OVER</h1>
+	<h3 class="h3">У тебя <span class="cpan"></span> попытки</h3>
+	<p class="pr">Найди Hyundai i20 Coupe</p>
+	<button class="btn1 btn btn-success" >START</button>
+	<div class="box1">
+		<p class="p">Peugeot 208 T16</p>
+	</div>
+
+	<div class="box2">
+		<p class="p2">Ford Fiesta R5</p>
+	</div>
+
+	<div class="box3">
+		<p class="p3">Hyundai i20 Coupe</p>		
+	</div>
+
+	<div class="box4">
+		<p class="p4">Skoda Fabia R5</p>
+	</div>
+
+	<div class="box5">
+		<p class="p5">Toyota Yaris </p>
+	</div>
+
+	<div class="box6">
+		<p class="p6">Citroen DS 3 R5</p>
+	</div>
+
+	<script type="text/javascript">
+		let score = 2
+		document.querySelector(".cpan").innerHTML = score
+		document.querySelector(".btn1").onclick = function() {
+			document.querySelector(".p").style.display = "none"
+			document.querySelector(".p2").style.display = "none"
+			document.querySelector(".p3").style.display = "none"
+			document.querySelector(".p4").style.display = "none"
+			document.querySelector(".p5").style.display = "none"
+			document.querySelector(".p6").style.display = "none"
+			document.querySelector(".box1").style.background = 'black'
+			document.querySelector(".box2").style.background = 'black'
+			document.querySelector(".box3").style.background = 'black'
+			document.querySelector(".box4").style.background = 'black'
+			document.querySelector(".box5").style.background = 'black'
+			document.querySelector(".box6").style.background = 'black'
+			document.querySelector(".box1").style.left = "1025px"
+			document.querySelector(".box2").style.left = "225px"
+			document.querySelector(".box2").style.top = "450px"
+			document.querySelector(".box3").style.left = "225px"
+			document.querySelector(".box4").style.left = "625px"
+			document.querySelector(".box5").style.left = "1025px"
+			document.querySelector(".box6").style.left = "625px"
+			document.querySelector(".box6").style.top = "200px"
+			
+		}
+		document.querySelector(".box1").onclick = function() {
+			alert("Неверно")
+			score = score - 1
+			document.querySelector(".cpan").innerHTML = score
+			document.querySelector(".box1").style.display = "none"
+			if(score == 0) {
+				document.querySelector(".box1").style.display = "none"
+				document.querySelector(".box2").style.display = "none"
+				document.querySelector(".box3").style.display = "none"
+				document.querySelector(".box4").style.display = "none"
+				document.querySelector(".box5").style.display = "none"
+				document.querySelector(".box6").style.display = "none"
+				document.querySelector(".btn1").style.display = "none"
+				document.querySelector(".pr").style.display = "none"
+				document.querySelector(".h3").style.display = "none"
+				document.querySelector(".body").style.backgroundSize = "0%"
+				document.querySelector(".h1").style.display = "block"
+
+			}
+
+		}
+		document.querySelector(".box2").onclick = function() {
+			alert("Неверно")
+			score = score - 1
+			document.querySelector(".cpan").innerHTML = score
+			document.querySelector(".box2").style.display = "none"
+			if(score == 0) {
+				document.querySelector(".box1").style.display = "none"
+				document.querySelector(".box2").style.display = "none"
+				document.querySelector(".box3").style.display = "none"
+				document.querySelector(".box4").style.display = "none"
+				document.querySelector(".box5").style.display = "none"
+				document.querySelector(".box6").style.display = "none"
+				document.querySelector(".btn1").style.display = "none"
+				document.querySelector(".pr").style.display = "none"
+				document.querySelector(".h3").style.display = "none"
+				document.querySelector(".body").style.backgroundSize = "0%"
+				document.querySelector(".h1").style.display = "block"
+			} 
+
+		}
+		document.querySelector(".box5").onclick = function() {
+			alert("Неверно")
+			score = score - 1
+			document.querySelector(".cpan").innerHTML = score
+			document.querySelector(".box5").style.display = "none"
+			if(score == 0) {
+				document.querySelector(".box1").style.display = "none"
+				document.querySelector(".box2").style.display = "none"
+				document.querySelector(".box3").style.display = "none"
+				document.querySelector(".box4").style.display = "none"
+				document.querySelector(".box5").style.display = "none"
+				document.querySelector(".box6").style.display = "none"
+				document.querySelector(".btn1").style.display = "none"
+				document.querySelector(".pr").style.display = "none"
+				document.querySelector(".h3").style.display = "none"
+				document.querySelector(".body").style.backgroundSize = "0%"
+				document.querySelector(".h1").style.display = "block"
+			} 
+
+		}
+		document.querySelector(".box4").onclick = function() {
+			alert("Нет")
+			score = score - 1
+			document.querySelector(".cpan").innerHTML = score
+			document.querySelector(".box4").style.display = "none"
+			if(score == 0) {
+				document.querySelector(".box1").style.display = "none"
+				document.querySelector(".box2").style.display = "none"
+				document.querySelector(".box3").style.display = "none"
+				document.querySelector(".box4").style.display = "none"
+				document.querySelector(".box5").style.display = "none"
+				document.querySelector(".box6").style.display = "none"
+				document.querySelector(".btn1").style.display = "none"
+				document.querySelector(".pr").style.display = "none"
+				document.querySelector(".h3").style.display = "none"
+				document.querySelector(".body").style.backgroundSize = "0%"
+				document.querySelector(".h1").style.display = "block"
+			} 
+
+		}
+		document.querySelector(".box6").onclick = function() {
+			alert("Неверно")
+			score = score - 1
+			document.querySelector(".cpan").innerHTML = score
+			document.querySelector(".box6").style.display = "none"
+			if(score == 0) {
+				document.querySelector(".box1").style.display = "none"
+				document.querySelector(".box2").style.display = "none"
+				document.querySelector(".box3").style.display = "none"
+				document.querySelector(".box4").style.display = "none"
+				document.querySelector(".box5").style.display = "none"
+				document.querySelector(".box6").style.display = "none"
+				document.querySelector(".btn1").style.display = "none"
+				document.querySelector(".pr").style.display = "none"
+				document.querySelector(".h3").style.display = "none"
+				document.querySelector(".body").style.backgroundSize = "0%"
+				document.querySelector(".h1").style.display = "block"
+			} 
+
+		}
+		document.querySelector(".box3").onclick = function() {
+			alert("Победа!")
+			document.querySelector(".box3").style.display = "none"
+				document.querySelector(".box1").style.display = "none"
+				document.querySelector(".box2").style.display = "none"
+				document.querySelector(".box3").style.display = "none"
+				document.querySelector(".box4").style.display = "none"
+				document.querySelector(".box5").style.display = "none"
+				document.querySelector(".box6").style.display = "none"
+				document.querySelector(".btn1").style.display = "none"
+				document.querySelector(".pr").style.display = "none"
+				document.querySelector(".h3").style.display = "none"
+				document.querySelector(".body").style.backgroundImage = "url(1.webp)"
+				
+
+		}
+	</script>
+</body>
+</html>
