@@ -147,7 +147,7 @@
 	</div>
 
 	<script type="text/javascript">
-		let score = 2
+		let score = 3
 		document.querySelector(".cpan").innerHTML = score
 		document.querySelector(".btn1").onclick = function() {
 			document.querySelector(".p").style.display = "none"
@@ -176,7 +176,8 @@
 			alert("Неверно")
 			score = score - 1
 			document.querySelector(".cpan").innerHTML = score
-			document.querySelector(".box1").style.display = "none"
+			document.querySelector(".box1").style.backgroundSize = "100% 100%"
+			document.querySelector(".box1").style.backgroundImage = "url(2.jpg)"
 			if(score == 0) {
 				document.querySelector(".box1").style.display = "none"
 				document.querySelector(".box2").style.display = "none"
@@ -197,7 +198,8 @@
 			alert("Неверно")
 			score = score - 1
 			document.querySelector(".cpan").innerHTML = score
-			document.querySelector(".box2").style.display = "none"
+			document.querySelector(".box2").style.backgroundSize = "100% 100%"
+			document.querySelector(".box2").style.backgroundImage = "url(3.jpg)"
 			if(score == 0) {
 				document.querySelector(".box1").style.display = "none"
 				document.querySelector(".box2").style.display = "none"
@@ -217,7 +219,8 @@
 			alert("Неверно")
 			score = score - 1
 			document.querySelector(".cpan").innerHTML = score
-			document.querySelector(".box5").style.display = "none"
+			document.querySelector(".box5").style.backgroundSize = "100% 100%"
+			document.querySelector(".box5").style.backgroundImage = "url(6.jpg)"
 			if(score == 0) {
 				document.querySelector(".box1").style.display = "none"
 				document.querySelector(".box2").style.display = "none"
@@ -237,7 +240,8 @@
 			alert("Нет")
 			score = score - 1
 			document.querySelector(".cpan").innerHTML = score
-			document.querySelector(".box4").style.display = "none"
+			document.querySelector(".box4").style.backgroundSize = "100% 100%"
+			document.querySelector(".box4").style.backgroundImage = "url(5.jpg)"
 			if(score == 0) {
 				document.querySelector(".box1").style.display = "none"
 				document.querySelector(".box2").style.display = "none"
@@ -257,7 +261,8 @@
 			alert("Неверно")
 			score = score - 1
 			document.querySelector(".cpan").innerHTML = score
-			document.querySelector(".box6").style.display = "none"
+			document.querySelector(".box6").style.backgroundSize = "100% 100%"
+			document.querySelector(".box6").style.backgroundImage = "url(7.jpg)"
 			if(score == 0) {
 				document.querySelector(".box1").style.display = "none"
 				document.querySelector(".box2").style.display = "none"
