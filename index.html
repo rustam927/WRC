@@ -21,6 +21,7 @@
 			top: 200px;
 			left: 225px;
 			transition: 1s;
+			border-radius: 20px;
 		}
 		.box2 {
 			background-image: url(3.jpg);
@@ -31,6 +32,7 @@
 			top: 200px;
 			left: 625px;
 			transition: 1s;
+			border-radius: 20px;
 		}
 		.box3 {
 			background-image: url(4.jpg);
@@ -41,6 +43,7 @@
 			top: 200px;
 			left: 1025px;
 			transition: 1s;
+			border-radius: 20px;
 		}
 		.box4 {
 			background-image: url(5.jpg);
@@ -51,6 +54,7 @@
 			top: 450px;
 			left: 225px;
 			transition: 1s;
+			border-radius: 20px;
 		}
 		.box5 {
 			background-image: url(6.jpg);
@@ -61,6 +65,7 @@
 			top: 450px;
 			left: 625px;
 			transition: 1s;
+			border-radius: 20px;
 		}
 		.box6 {
 			background-image: url(7.jpg);
@@ -71,6 +76,7 @@
 			top: 450px;
 			left: 1025px;
 			transition: 1s;
+			border-radius: 20px;
 		}
 		.btn1{
 			left: 700px;
@@ -78,6 +84,7 @@
 			top: 100px;
 			width: 150px;
 			height: 50px;
+
 		}
 		.h3{
 			position: absolute;
@@ -86,21 +93,27 @@
 		}
 		.p{
 			color: white;
+			margin-left: 5px;
 		}
 		.p2{
 			color: white;
+			margin-left: 5px;
 		}
 		.p3{
 			color: white;
+			margin-left: 5px;
 		}
 		.p4{
 			color: white;
+			margin-left: 5px;
 		}
 		.p5{
 			color: white;
+			margin-left: 5px;
 		}
 		.p6{
 			color: white;
+			margin-left: 5px;
 		}
 		.pr{
 			position: absolute;
@@ -178,6 +191,7 @@
 			document.querySelector(".cpan").innerHTML = score
 			document.querySelector(".box1").style.backgroundSize = "100% 100%"
 			document.querySelector(".box1").style.backgroundImage = "url(2.jpg)"
+			document.querySelector(".p").style.display = "block"
 			if(score == 0) {
 				document.querySelector(".box1").style.display = "none"
 				document.querySelector(".box2").style.display = "none"
@@ -200,6 +214,7 @@
 			document.querySelector(".cpan").innerHTML = score
 			document.querySelector(".box2").style.backgroundSize = "100% 100%"
 			document.querySelector(".box2").style.backgroundImage = "url(3.jpg)"
+			document.querySelector(".p2").style.display = "block"
 			if(score == 0) {
 				document.querySelector(".box1").style.display = "none"
 				document.querySelector(".box2").style.display = "none"
@@ -221,6 +236,7 @@
 			document.querySelector(".cpan").innerHTML = score
 			document.querySelector(".box5").style.backgroundSize = "100% 100%"
 			document.querySelector(".box5").style.backgroundImage = "url(6.jpg)"
+			document.querySelector(".p5").style.display = "block"
 			if(score == 0) {
 				document.querySelector(".box1").style.display = "none"
 				document.querySelector(".box2").style.display = "none"
@@ -242,6 +258,7 @@
 			document.querySelector(".cpan").innerHTML = score
 			document.querySelector(".box4").style.backgroundSize = "100% 100%"
 			document.querySelector(".box4").style.backgroundImage = "url(5.jpg)"
+			document.querySelector(".p4").style.display = "block"
 			if(score == 0) {
 				document.querySelector(".box1").style.display = "none"
 				document.querySelector(".box2").style.display = "none"
@@ -263,6 +280,7 @@
 			document.querySelector(".cpan").innerHTML = score
 			document.querySelector(".box6").style.backgroundSize = "100% 100%"
 			document.querySelector(".box6").style.backgroundImage = "url(7.jpg)"
+			document.querySelector(".p6").style.display = "block"
 			if(score == 0) {
 				document.querySelector(".box1").style.display = "none"
 				document.querySelector(".box2").style.display = "none"
